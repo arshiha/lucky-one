@@ -8,7 +8,7 @@ import Button from "react-bootstrap/Button";
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-  
+
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
@@ -98,7 +98,10 @@ const Shop = () => {
               ))}
 
               <div className="buttons text-center">
-                <Button onClick={chooseOneForMe} className="w-75 my-3">
+                <Button
+                  onClick={chooseOneForMe}
+                  className="w-75 my-3 bg-success"
+                >
                   Choose one for me
                 </Button>
                 <Button onClick={resetAll} className="w-75 bg-danger mb-5">

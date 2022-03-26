@@ -8,11 +8,20 @@ body {
   font-weight: bold;
   margin-bottom: 10px;
   background-color: orange;
-  color: #fff;
+  color: black;
   border-radius: 5px;
   padding: 20px;
 }
 .answers-panel {
   padding: 20px;
   font-size: 17px;
+}
+
+.style-text {
+  background-color: orangered;
+  width: 7%;
+  padding: 2px;
+  border-radius: 5px;
+  color: white;
+  margin-top: 20px;
 }
