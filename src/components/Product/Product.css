@@ -1,0 +1,38 @@
+.product {
+  background-color: #95a0a7;
+  width: 300px;
+  height: 510px;
+  border: 1px solid #95a0a7;
+  border-radius: 10px;
+  /* position: relative; */
+}
+
+.product img {
+  width: 290px;
+  height: 290px;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.product-info {
+  margin: 15px;
+}
+
+.product-name {
+  font-style: "normal";
+  font-weight: 500;
+  line-height: 25px;
+  color: black;
+}
+
+.btn {
+  width: 100%;
+  background-color: lightgray;
+  border-radius: 0px 0px 8px 8px;
+  border: 0px;
+  margin-top: 68px;
+}
+
+.btn:hover {
+  background-color: orange;
+}
