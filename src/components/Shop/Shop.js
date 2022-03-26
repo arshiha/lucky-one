@@ -62,15 +62,16 @@ const Shop = () => {
           <Cart key={item.id} cart={item} />
         ))}
 
-        <div className="buttons text-center">
-          <Button onClick={chooseOneForMe} className="w-75 my-3">
+        <div className="buttons">
+          <Button onClick={chooseOneForMe} className="w-100">
             Choose one for me
           </Button>
-          <Button onClick={resetAll} className="w-75 bg-danger mb-5">
+          <Button onClick={resetAll} className="w-100 bg-danger mt-3">
             Reset All
           </Button>
         </div>
       </div>
+      
     </div>
   );
 };

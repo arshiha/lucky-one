@@ -1,16 +1,12 @@
 .header {
-  color: yellowgreen;
-  font-size: x-large;
-  text-align: center;
+    color: #000;
+    font-size: x-large;
+    text-align: center;
+    padding: 53px 0;
+    background: orange;
+    font-weight: 800;
 }
-
-.header h4 {
-  color: darksalmon;
-}
-
-.header h1:hover {
-  color: orange;
-}
-.header h4:hover {
-  color: orangered;
+.header h1 {
+  color: #000;
+  font-weight: bold;
 }
