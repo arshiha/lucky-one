@@ -8,6 +8,7 @@ import Button from "react-bootstrap/Button";
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
@@ -15,7 +16,6 @@ const Shop = () => {
   }, []);
 
   const handleClick = (product) => {
-    console.log(product);
     const newCart = [...cart, product];
     setCart(newCart);
   };
@@ -31,6 +31,7 @@ const Shop = () => {
           ></Product>
         ))}
       </div>
+
       <div className="cart-container">
         <h4 className="p-5">Selected Items:{cart.length}</h4>
         {cart.map((item) => (
@@ -38,12 +39,8 @@ const Shop = () => {
         ))}
 
         <div className="buttons text-center">
-          <Button  className="w-75 my-3">
-            Choose one for me
-          </Button>
-          <Button  className="w-75 bg-danger mb-5">
-            Reset All
-          </Button>
+          <Button className="w-75 my-3">Choose one for me</Button>
+          <Button className="w-75 bg-danger mb-5">Reset All</Button>
         </div>
       </div>
     </div>
