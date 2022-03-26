@@ -63,15 +63,15 @@ const Shop = () => {
         ))}
 
         <div className="buttons">
-          <Button onClick={chooseOneForMe} className="w-100">
+          <button onClick={chooseOneForMe} className="choose-btn">
             Choose one for me
-          </Button>
-          <Button onClick={resetAll} className="w-100 bg-danger mt-3">
+          </button>
+          <button onClick={resetAll} className="reset-btn bg-danger mt-3">
             Reset All
-          </Button>
+          </button>
         </div>
       </div>
-      
+
     </div>
   );
 };
