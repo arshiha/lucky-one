@@ -45,33 +45,70 @@ const Shop = () => {
   };
 
   return (
-    <div className="shop">
-      <div className="products-container">
-        {products.map((product) => (
-          <Product
-            key={product.id}
-            product={product}
-            handleAddToCart={handleAddToCart}
-          ></Product>
-        ))}
-      </div>
+    // <div className="shop">
+    //   <div className="products-container">
+    //     {products.map((product) => (
+    //       <Product
+    //         key={product.id}
+    //         product={product}
+    //         handleAddToCart={handleAddToCart}
+    //       ></Product>
+    //     ))}
+    //   </div>
 
-      <div className="cart-container">
-        <h4 className="p-5">Selected Items:{cart.length}</h4>
-        {cart.map((item) => (
-          <Cart key={item.id} cart={item} />
-        ))}
+    //   <div className="cart-container">
+    //     <h4 className="p-5">Selected Items:{cart.length}</h4>
+    //     {cart.map((item) => (
+    //       <Cart key={item.id} cart={item} />
+    //     ))}
 
-        <div className="buttons">
-          <button onClick={chooseOneForMe} className="choose-btn">
-            Choose one for me
-          </button>
-          <button onClick={resetAll} className="reset-btn bg-danger mt-3">
-            Reset All
-          </button>
+    //     <div className="buttons">
+    //       <button onClick={chooseOneForMe} className="choose-btn">
+    //         Choose one for me
+    //       </button>
+    //       <button onClick={resetAll} className="reset-btn bg-danger mt-3">
+    //         Reset All
+    //       </button>
+    //     </div>
+    //   </div>
+
+    // </div>
+    <div className="my-5">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-9">
+            <div className="container">
+              <div className="row">
+                {products.map((product) => (
+                  <Product
+                    key={product.id}
+                    product={product}
+                    handleAddToCart={handleAddToCart}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="col-md-3">
+            <div className="cart-container">
+              <h4 className="p-5">Selected Items:{cart.length}</h4>
+              {cart.map((item) => (
+                <Cart key={item.id} cart={item} />
+              ))}
+
+              <div className="buttons text-center">
+                <Button onClick={chooseOneForMe} className="w-75 my-3">
+                  Choose one for me
+                </Button>
+                <Button onClick={resetAll} className="w-75 bg-danger mb-5">
+                  Reset All
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
   );
 };
