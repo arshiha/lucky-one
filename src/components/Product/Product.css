@@ -30,7 +30,14 @@
   background-color: lightgray;
   border-radius: 0px 0px 8px 8px;
   border: 0px;
-  margin-top: 68px;
+  margin-top: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn .btn-text {
+  margin-right: 5px;
 }
 
 .btn:hover {
