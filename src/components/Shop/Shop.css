@@ -23,6 +23,23 @@
   background-color: aquamarine;
 }
 
+/* Extra
+.shop-container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.cart-container {
+  background-color: rgba(255, 153, 0, 0.3);
+  border-radius: 15px;
+  height: auto;
+  position: sticky;
+  top: 0;
+}
+.buttons{
+  position: relative;
+} */
+
 @media screen and (max-width: 1100px) {
   .products-container {
     grid-template-columns: repeat(2, 1fr);

@@ -15,9 +15,33 @@ const Shop = () => {
       .then((data) => setProducts(data));
   }, []);
 
-  const handleClick = (product) => {
-    const newCart = [...cart, product];
-    setCart(newCart);
+  const handleAddToCart = (product) => {
+    const exists = cart.find((item) => item.id === product.id);
+    if (!exists) {
+      if (cart.length < 4) {
+        const newCart = [...cart, product];
+        setCart(newCart);
+      } else {
+        alert("You cannot select more than four item products");
+      }
+    } else {
+      alert("Already Selected");
+    }
+  };
+
+  // handle buttons
+  const chooseOneForMe = () => {
+    if (cart.length === 0) {
+      alert("please add items you want to buy");
+    } else {
+      const newCart = [...cart];
+      const randomNewCartLength = Math.floor(Math.random() * newCart.length);
+      alert("your Random product is: " + newCart[randomNewCartLength].name);
+    }
+  };
+
+  const resetAll = () => {
+    setCart([]);
   };
 
   return (
@@ -27,7 +51,7 @@ const Shop = () => {
           <Product
             key={product.id}
             product={product}
-            handleClick={handleClick}
+            handleAddToCart={handleAddToCart}
           ></Product>
         ))}
       </div>
@@ -39,8 +63,12 @@ const Shop = () => {
         ))}
 
         <div className="buttons text-center">
-          <Button className="w-75 my-3">Choose one for me</Button>
-          <Button className="w-75 bg-danger mb-5">Reset All</Button>
+          <Button onClick={chooseOneForMe} className="w-75 my-3">
+            Choose one for me
+          </Button>
+          <Button onClick={resetAll} className="w-75 bg-danger mb-5">
+            Reset All
+          </Button>
         </div>
       </div>
     </div>
